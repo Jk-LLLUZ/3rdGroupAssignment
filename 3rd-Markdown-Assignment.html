@@ -262,7 +262,7 @@ pre code {
 <div id="introduction-1" class="section level3">
 <h3><strong>Introduction</strong></h3>
 <hr />
-<p>As of writing this paper, the world is in hiatus from fully experiencing the world outside their homes. In the midst of the COVID-19 pandemic, part of mitigating infection is the limitation of physical interactions among human beings. With that, one solution set by the governments across various nations is putting their countries in quarantine. While this certainly helps prevent the spread of the virus, there are other accompanying deficiencies in this solution beyond the virus. One of which is the rise in household utility bills such as electricity. During the pandemic, Filipino families have relied on electrically powered appliances such as air conditioners, televisions, and the like for comfort and entertainment. With that, they also result in higher, sometimes unprecedented, electricity charges.[1]</p>
+<p>As of writing this paper, the world is in hiatus from fully experiencing the world outside their homes. In the midst of the COVID-19 pandemic, part of mitigating infection is the limitation of physical interactions among human beings. With that, one solution set by the governments across various nations is putting their countries in quarantine. While this certainly helps prevent the spread of the virus, there are other accompanying deficiencies in this solution beyond the virus. One of which is the rise in household utility bills such as electricity. During the pandemic, Filipino families have relied on electrically powered appliances such as air conditioners, televisions, and the like for comfort and entertainment. With that, they also result in higher, sometimes unprecedented, electricity charges [1].</p>
 <p><br></p>
 <p>Given this timely issue, solutions should be explored and implemented surrounding concepts of energy reduction and cost efficiency. With that, the group came across an Indonesian academic article written by Martini et al. which tackles a simple yet impactful solution to reducing the cost of electrical bills. They identified that one of the most overlooked factors to heightened electricity bill prices is the constant usage of light bulbs and lamps. Using fundamental concepts of electronics and programming, the researchers were able to test automatic light switches (sensor-based) against manual, traditional light switches in public restrooms as these are places wherein light is left on for long periods of time - therefore implying larger energy consumption and cost.</p>
 <p><br></p>
@@ -275,6 +275,22 @@ pre code {
 <div id="methodology-1" class="section level3">
 <h3><strong>Methodology</strong></h3>
 <hr />
+<p>In this paper, an infrared-based sensor namely Passive Infrared Receiver or PIR is used to detect body movements present. Based on its name, PIR is a passive type of sensor meaning by itself, it does not emit infrared radiations. With this distinct quality, PIR is the suitable device to use in this study as the detected heat radiation is solely caused by human presence and body movements, creating a more controlled environment guaranteed from external errors.</p>
+<p><br></p>
+<p>With the goal to identify whether the sensors will decrease power consumption and consequently the cost, the Indonesian authors used the simplest way to obtain results. The plan was to compare the Electrical power consumed (in kWh) before and after the sensors’ installations. The experiment room to be used was a public restroom in their building, since restrooms are places where people come and go, making it an appropriate set-up for the experiment. The authors then installed the sensors on the electrical appliances (lamps and exhaust fans) to obtain a wide area of the room, and the Electrical Power Consumption Meter for the facilitation of data measurement. After measuring the power consumption every 7 hours for 13 times, the sensors and program were now activated and the second half of the reading and measuring proceeded.</p>
+<p><br></p>
+<p>We, the researchers, will conduct a hypothesis test and the next step would be identifying the parameters. The parameters to be calculated are the means and standard deviations of both variables. The sample of both variables are the same which is 13 and lastly, we will use a 5% confidence interval for this hypothesis test.</p>
+<div style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;">
+<div id="with-sensor" class="section level4">
+<h4><strong>With Sensor</strong></h4>
+<div id="mean" class="section level5">
+<h5>Mean</h5>
+<p><span class="math display">\[
+  \overline{x} = 11.6
+\]</span></p>
+</div>
+<div id="standard-deviation" class="section level5">
+<h5>Standard Deviation</h5>
 <p><span class="math display">\[
   \sigma=\sqrt{(\frac{1}{n-1})\sum_{i=1}^{n}{(x_i - \bar{x})^2}}
 \]</span></p>
@@ -286,6 +302,18 @@ pre code {
 \]</span> <span class="math display">\[
     \sigma=6.3805705656775
 \]</span></p>
+</div>
+</div>
+<div id="without-sensor" class="section level4">
+<h4><strong>Without Sensor</strong></h4>
+<div id="mean-1" class="section level5">
+<h5>Mean</h5>
+<p><span class="math display">\[
+  \overline{x} = 27.9
+\]</span></p>
+</div>
+<div id="standard-deviation-1" class="section level5">
+<h5>Standard Deviation</h5>
 <p><span class="math display">\[
   \sigma=\sqrt{(\frac{1}{n-1})\sum_{i=1}^{n}{(x_i - \bar{x})^2}}
 \]</span></p>
@@ -297,6 +325,9 @@ pre code {
 \]</span> <span class="math display">\[
     \sigma=18.016849162481
 \]</span></p>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div id="results" class="section level2">

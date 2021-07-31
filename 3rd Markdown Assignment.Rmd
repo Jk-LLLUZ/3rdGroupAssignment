@@ -18,7 +18,7 @@ Martini Martini, Indra Riyanto, Adiyarta Krisna, M. Suparmoko
 
 -----
 
-As of writing this paper, the world is in hiatus from fully experiencing the world outside their homes.  In the midst of the COVID-19 pandemic, part of mitigating infection is the limitation of physical interactions among human beings.  With that, one solution set by the governments across various nations is putting their countries in quarantine.  While this certainly helps prevent the spread of the virus, there are other accompanying deficiencies in this solution beyond the virus.  One of which is the rise in household utility bills such as electricity.  During the pandemic, Filipino families have relied on electrically powered appliances such as air conditioners, televisions, and the like for comfort and entertainment.  With that, they also result in higher, sometimes unprecedented, electricity charges.[1]
+As of writing this paper, the world is in hiatus from fully experiencing the world outside their homes.  In the midst of the COVID-19 pandemic, part of mitigating infection is the limitation of physical interactions among human beings.  With that, one solution set by the governments across various nations is putting their countries in quarantine.  While this certainly helps prevent the spread of the virus, there are other accompanying deficiencies in this solution beyond the virus.  One of which is the rise in household utility bills such as electricity.  During the pandemic, Filipino families have relied on electrically powered appliances such as air conditioners, televisions, and the like for comfort and entertainment.  With that, they also result in higher, sometimes unprecedented, electricity charges [1].
 
 <br>
 
@@ -36,6 +36,30 @@ The study conducted by Martini et al. included 13 different samples depending on
 
 -----
 
+In this paper, an infrared-based sensor namely Passive Infrared Receiver or PIR is used to detect body movements present. Based on its name, PIR is a passive type of sensor meaning by itself, it does not emit infrared radiations. With this distinct quality, PIR is the suitable device to use in this study as the detected heat radiation is solely caused by human presence and body movements, creating a more controlled environment guaranteed from external errors.
+
+<br>
+
+With the goal to identify whether the sensors will decrease power consumption and consequently the cost, the Indonesian authors used the simplest way to obtain results. The plan was to compare the Electrical power consumed (in kWh) before and after the sensors’ installations. The experiment room to be used was a public restroom in their building, since restrooms are places where people come and go, making it an appropriate set-up for the experiment. The authors then installed the sensors on the electrical appliances (lamps and exhaust fans) to obtain a wide area of the room, and the Electrical Power Consumption Meter for the facilitation of data measurement. After measuring the power consumption every 7 hours for 13 times, the sensors and program were now activated and the second half of the reading and measuring proceeded.
+
+<br>
+
+We, the researchers, will conduct a hypothesis test and the next step would be identifying the parameters. The parameters to be calculated are the means and standard deviations of both variables. The sample of both variables are the same which is 13 and lastly, we will use a 5% confidence interval for this hypothesis test.
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
+
+:::: {}
+
+#### **With Sensor**
+
+##### Mean
+
+$$
+  \overline{x} = 11.6
+$$
+
+##### Standard Deviation
+
 $$
   \sigma=\sqrt{(\frac{1}{n-1})\sum_{i=1}^{n}{(x_i - \bar{x})^2}}
 $$
@@ -50,6 +74,19 @@ $$
 $$
   	\sigma=6.3805705656775
 $$
+:::
+
+:::{}
+
+#### **Without Sensor**
+
+##### Mean
+
+$$
+  \overline{x} = 27.9
+$$
+
+##### Standard Deviation
 
 $$
   \sigma=\sqrt{(\frac{1}{n-1})\sum_{i=1}^{n}{(x_i - \bar{x})^2}}
@@ -65,6 +102,11 @@ $$
 $$
   	\sigma=18.016849162481
 $$
+:::
+
+::::
+
+
 
 ## Results
 
