@@ -189,7 +189,7 @@ Since  **0.004 is significantly less than 0.05**, we reject the null hypothesis.
 
 :::: {}
 
-**Electrical Power w/o Sensors**
+
 
 
 ```{r, echo= FALSE, fig.width = 5, fig.height = 3}
@@ -242,7 +242,7 @@ abline(line, col="blue")
 
 :::{}
 
-**Electrical Power w/o Sensor**
+
 
 ```{r, echo= FALSE, fig.width = 5, fig.height = 3}
 
