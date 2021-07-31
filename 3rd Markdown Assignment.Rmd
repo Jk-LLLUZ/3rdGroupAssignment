@@ -144,8 +144,29 @@ $$
 $$
 
 #### **Step 5: Reject $H_o$ if**
-Reject $H_o$ if the _pvalue is less than $0.05$
+<center>
+Reject $H_o$ if the $p-value$ is less than $0.05$
+</center>
+<br>
+*Calculating the Degree of Freedom*
 
+$$
+  D_f = \frac{((\frac{\sigma_a^2}{n_a})+(\frac{\sigma_b^2}{n_b}))^2}{\frac{(\frac{\sigma_a^2}{n_a})^2}{n_a-1}+\frac{(\frac{\sigma_b^2}{n_b})^2}{n_b-1}}
+$$
+
+$$
+  D_f = \frac{((\frac{6.4^2}{13})+(\frac{18^2}{13}))^2}{\frac{(\frac{6.4^2}{13})^2}{12}+\frac{(\frac{18^2}{13})^2}{12}}
+$$
+
+$$
+  D_f  = \frac{788.1408379}{0.8272788955+51.76331361}
+$$
+
+$$
+  D_f  = 14.98634642
+\\
+  D_f  = 14.99
+$$
 
 #### **Step 6: Computations**
 
@@ -321,12 +342,15 @@ abline(line, col="red")
 ```
 
 
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> 743a46ec16591f0a9beffbefb9c56f3015dd65b6
 ## Discussion and Conclusion
 
 
