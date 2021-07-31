@@ -28,6 +28,7 @@ Given this timely issue, solutions should be explored and implemented surroundin
 
 The study included 13 different samples depending on duration wherein the following essential data were obtained:  energy consumption with the sensor, energy consumption without the sensor, cost in Indonesian Rupiah (Rp) with the sensor, and the cost in Rp without the sensor.  However, the group ultimately decided to focus on energy consumption with the sensor as well as energy consumption without the sensor since conclusions regarding cost can immediately be drawn from these sets of data.  These were obtained by determining how much electrical power in kilowatt hour (kWh) was consumed at various fixed periods of time and comparing data with the sensor and with its absence.  In conclusion, the group would like to determine whether the application of sensor-based light switches can help decrease electricity consumption.
 
+<br><br><br>
 
 ## Methodology
 
