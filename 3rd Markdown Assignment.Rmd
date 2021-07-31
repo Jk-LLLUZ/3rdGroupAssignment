@@ -123,7 +123,7 @@ $$
 Without sensor:
 $$
   \overline{x} = 27.9
-$$
+$$  
 $$
   \sigma = 18
 $$
@@ -175,18 +175,18 @@ We then find the probability of $P(t\ge -3.08)$ by first determining the degrees
 
 -----
 
-**Electrical Power w/ Sensor**
+**Electrical Power w/o Sensor**
 
 
 ```{r}
-T_ws <- data.frame(  
-                    n               =1:13,
-                    Duration        =c(1,7,14,21,28,35,42,49,56,63,70,77,84),
-                    With_Sensors    =c(0.504,2.711,5.058,7.158,8.890,10.622,12.264,13.816,15.278,16.651,17.933,19.126,20.229)
+df1 <- data.frame(  
+                    n             = 1:13,
+                    Duration      = c(1,7,14,21,28,35,42,49,56,63,70,77,84),
+                    With_Sensors  = c(0.504,2.711,5.058,7.158,8.890,10.622,12.264,13.816,15.278,16.651,17.933,19.126,20.229)
                     
                   )
 
-knitr::kable(T_ws, caption = '**Table 1**' )
+knitr::kable(df1, caption = '**Electrical Power w/o Senso**' )
 
 
 
@@ -198,19 +198,19 @@ knitr::kable(T_ws, caption = '**Table 1**' )
 
 
 ```{r}
-y=c(1,7,14,21,28,35,42,49,56,63,70,77,84)
-x=c(0.504,2.711,5.058,7.158,8.890,10.622,12.264,13.816,15.278,16.651,17.933,19.126,20.229)
+y = c(1,7,14,21,28,35,42,49,56,63,70,77,84)
+x = c(0.504,2.711,5.058,7.158,8.890,10.622,12.264,13.816,15.278,16.651,17.933,19.126,20.229)
 
 plot(
      x~y,
      main = "Energy Consumption W/ Sensors",
-     xlab= "Duration (Hours)",
+     xlab = "Duration (Hours)",
      ylab = "Electrical Power Consumption (kWh)",
-     cex= 1,
+     cex  = 1,
      ylim = c(0, 60),
-     col = "red",
-     pch=21,  
-     bg="red"
+     col  = "red",
+     pch  = 21,  
+     bg   = "red"
     )
 
 lines(
@@ -233,19 +233,19 @@ abline(line, col="blue")
 ```{r}
 
 
-T_wos <- data.frame(  
-                    n                  =1:13,
-                    Duration           =c(1,7,14,21,28,35,42,49,56,63,70,77,84),
-                    Without_Sensors    =c(0.664,4.648,9.296,13.944,18.592,23.24,27.888,32.536,37.184,41.832,46.48,51.128,55.776)
+df2 <- data.frame(  
+                    n                  = 1:13,
+                    Duration           = c(1,7,14,21,28,35,42,49,56,63,70,77,84),
+                    Without_Sensors    = c(0.664,4.648,9.296,13.944,18.592,23.24,27.888,32.536,37.184,41.832,46.48,51.128,55.776)
                   )
-knitr::kable(T_wos, caption = '**Table 2**' )
+knitr::kable(df2, caption = '**Electrical Power w/o Sensor**' )
 
 ```
 
 
 ```{r}
-y=c(1,7,14,21,28,35,42,49,56,63,70,77,84)
-x=c(0.664,4.648,9.296,13.944,18.592,23.24,27.888,32.536,37.184,41.832,46.48,51.128,55.776)
+y = c(1,7,14,21,28,35,42,49,56,63,70,77,84)
+x = c(0.664,4.648,9.296,13.944,18.592,23.24,27.888,32.536,37.184,41.832,46.48,51.128,55.776)
 
 
 
@@ -257,12 +257,12 @@ plot(
      cex  = 1,
      ylim = c(0, 60),
      col  = "blue",
-     pch  =21,  
-     bg   ="blue")
+     pch  = 21,  
+     bg   = "blue")
 
 lines(
       x~y,
-      bg="red"
+      bg ="red"
      )
 
 line=lm(x~y)
@@ -274,9 +274,8 @@ abline(line, col="red")
 
 ```{r}
 
-x    =c(0.504,2.711,5.058,7.158,8.890,10.622,12.264,13.816,15.278,16.651,17.933,19.126,20.229)
-y    =c(0.664,4.648,9.296,13.944,18.592,23.24,27.888,32.536,37.184,41.832,46.48,51.128,55.776)
-
+x = c(0.504,2.711,5.058,7.158,8.890,10.622,12.264,13.816,15.278,16.651,17.933,19.126,20.229)
+y = c(0.664,4.648,9.296,13.944,18.592,23.24,27.888,32.536,37.184,41.832,46.48,51.128,55.776)
 a = c(0.504,2.711,5.058,7.158,8.890,10.622,12.264,13.816,15.278,16.651,17.933,19.126,20.229)
 b = c(0.664,4.648,9.296,13.944,18.592,23.24,27.888,32.536,37.184,41.832,46.48,51.128,55.776)
  
@@ -286,12 +285,12 @@ test2 = 1-test
 test3 = test2*100
 
 
-T_wos <- data.frame(  
-                    x    =c(0.504,2.711,5.058,7.158,8.890,10.622,12.264,13.816,15.278,16.651,17.933,19.126,20.229),
-                    y    =c(0.664,4.648,9.296,13.944,18.592,23.24,27.888,32.536,37.184,41.832,46.48,51.128,55.776),
+df3 <- data.frame(  
+                    x = c(0.504,2.711,5.058,7.158,8.890,10.622,12.264,13.816,15.278,16.651,17.933,19.126,20.229),
+                    y = c(0.664,4.648,9.296,13.944,18.592,23.24,27.888,32.536,37.184,41.832,46.48,51.128,55.776),
                     test3
                    )
-knitr::kable(T_wos, caption = '**Table 2**' )
+knitr::kable(df3, caption = '**Table 2**' )
 
  
 ```
@@ -301,19 +300,19 @@ knitr::kable(T_wos, caption = '**Table 2**' )
 
 plot(
      test3~y,
-     xlab="duration",
-     ylab="Energy Reduction (%)",
-     main= "Energy Reduction per week ",
-     cex= 1,
+     xlab = "duration",
+     ylab = "Energy Reduction (%)",
+     main = "Energy Reduction per week ",
+     cex  = 1,
      ylim = c(0, 65),
-     col = "blue",
-     pch=21,  
-     bg="blue"
+     col  = "blue",
+     pch  = 21,  
+     bg   = "blue"
     )
 
 lines(
       test3~y,
-      bg="blue"
+      bg = "blue"
      )
 
 line=lm(test3~y)
@@ -323,21 +322,7 @@ abline(line, col="red")
 
 
 
-**7 STEP PROCESS:**
 
-Parameter of Interest
-
-Stating Null Hypothesis
-
-Stating Alternative Hypothesis
-
-Determining Appropriate Test Statistic
-
-Reject Ho if
-
-Computations
-
-Conclusion
 
 
 
