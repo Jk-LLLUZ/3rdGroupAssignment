@@ -72,7 +72,7 @@ $$
   \sigma=\sqrt{40.71168074359}
 $$
 $$
-  	\sigma=6.3805705656775
+  	\sigma=6.3805705656775 ≈ 6.4
 $$
 :::
 
@@ -100,13 +100,19 @@ $$
   \sigma=\sqrt{324.60685374359}
 $$
 $$
-  	\sigma=18.016849162481 
+  	\sigma=18.016849162481 ≈ 18
 $$
 :::
 
 ::::
 
+<br><br><br>
 
+## Results
+
+### **Results**
+
+-----
 
 ### **Using the 7-Step Approach**
 
@@ -115,10 +121,10 @@ We are interested in $\mu_a$ and $\mu_b$, specifically the difference between th
 
 
 #### **Step 2: Stating Null Hypothesis**
-The null hypothesis would be as follows$H_0 : \mu_A = \mu_b$ saying that there is no significant difference between the energy consumption with the sensor and without it.<br><br>
+The null hypothesis would be as follows $H_0 : \mu_A = \mu_b$ saying that there is no significant difference between the energy consumption with the sensor and without it.<br><br>
 
 #### **Step 3: Stating Alternative Hypothesis**
-The alternative hypothesis would be as follows $H_1 : \mu_A < \mu_B$ saying that there is a significant difference between the energy consumption with the sensor and without it.<br><br>
+The alternative hypothesis would be as follows $H_1 : \mu_A < \mu_B$ saying that the energy consumption without the sensor would be significantly greater than with the use of the sensor..<br><br>
 
 #### **Step 4: Determining Appropriate Test Statistic**
 Since the mean and standard deviation are known (refer to the Methodology section), and the sample is less than 30, then the appropriate test statistic is defined by the formula: 
@@ -175,22 +181,18 @@ We then find the probability of $P(t\ge -3.08)$ by first determining the degrees
 Therefore, the **probability of $P(t\ge -3.08)$ is approximately 0.004.**<br><br>
 
 #### **Step 7: Conclusion** 
-Since  0.004 is significantly less than 0.05, we reject the null hypothesis. Therefore, we can come to a conclusion that the energy consumption without the use of a sensor is significantly greater than when using a sensor.
-
-
-
-
-## Results
-
-### **Results**
-
+Since  **0.004 is significantly less than 0.05**, we reject the null hypothesis. Therefore, we can come to a conclusion that the energy consumption without the use of a sensor is significantly greater than when using a sensor.
 
 -----
 
-**Electrical Power w/o Sensor**
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 15px;"}
+
+:::: {}
+
+**Electrical Power w/o Sensors**
 
 
-```{r}
+```{r, echo= FALSE, fig.width = 5, fig.height = 3}
 df1 <- data.frame(  
                     n             = 1:13,
                     Duration      = c(1,7,14,21,28,35,42,49,56,63,70,77,84),
@@ -198,7 +200,7 @@ df1 <- data.frame(
                     
                   )
 
-knitr::kable(df1, caption = '**Electrical Power w/o Senso**' )
+knitr::kable(df1, caption = '**Electrical Power w/o Sensors**' )
 
 
 
@@ -209,7 +211,7 @@ knitr::kable(df1, caption = '**Electrical Power w/o Senso**' )
 
 
 
-```{r}
+```{r, echo= FALSE, fig.width = 5, fig.height = 3}
 y = c(1,7,14,21,28,35,42,49,56,63,70,77,84)
 x = c(0.504,2.711,5.058,7.158,8.890,10.622,12.264,13.816,15.278,16.651,17.933,19.126,20.229)
 
@@ -236,13 +238,13 @@ abline(line, col="blue")
 
 ```
 
+:::
 
+:::{}
 
+**Electrical Power w/o Sensor**
 
-
-***Electrical Power w/o Sensor**
-
-```{r}
+```{r, echo= FALSE, fig.width = 5, fig.height = 3}
 
 
 df2 <- data.frame(  
@@ -250,12 +252,12 @@ df2 <- data.frame(
                     Duration           = c(1,7,14,21,28,35,42,49,56,63,70,77,84),
                     Without_Sensors    = c(0.664,4.648,9.296,13.944,18.592,23.24,27.888,32.536,37.184,41.832,46.48,51.128,55.776)
                   )
-knitr::kable(df2, caption = '**Electrical Power w/o Sensor**' )
+knitr::kable(df2, caption = '**Electrical Power w/o Sensors**' )
 
 ```
 
 
-```{r}
+```{r, echo= FALSE, fig.width = 5, fig.height = 3}
 y = c(1,7,14,21,28,35,42,49,56,63,70,77,84)
 x = c(0.664,4.648,9.296,13.944,18.592,23.24,27.888,32.536,37.184,41.832,46.48,51.128,55.776)
 
@@ -281,10 +283,15 @@ line=lm(x~y)
 abline(line, col="red")
 ```
 
+:::
+
+::::
+
+<br><br>
 **Comparison Based on the % of Reduction**
 
 
-```{r}
+```{r, echo= FALSE}
 
 x = c(0.504,2.711,5.058,7.158,8.890,10.622,12.264,13.816,15.278,16.651,17.933,19.126,20.229)
 y = c(0.664,4.648,9.296,13.944,18.592,23.24,27.888,32.536,37.184,41.832,46.48,51.128,55.776)
@@ -307,8 +314,8 @@ knitr::kable(df3, caption = '**Table 2**' )
  
 ```
 
-
-```{r}
+<center>
+```{r, echo= FALSE}
 
 plot(
      test3~y,
@@ -331,21 +338,10 @@ line=lm(test3~y)
 abline(line, col="red")
 
 ```
-
-
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
->>>>>>> 743a46ec16591f0a9beffbefb9c56f3015dd65b6
+</center>
 
 
 ## Discussion and Conclusion
-
 
 ### **Discussion**
 
@@ -370,4 +366,9 @@ According to the results that were found during the testing and experiment, ther
 
 -----
 
-content
+<ol>
+<li> H. A. Fernandez, “As power Bills surge amid Covid-19, WILL PROSUMERS be the philippines' next big Energy trend?,” Eco, 06-Oct-2020. 
+    [Online]. Available: https://www.eco-business.com/news/as-power-bills-surge-amid-covid-19-will-prosumers-be-the-philippines-next-big-energy-trend/. [Accessed: 31-Jul-2021]. </li>
+<br>
+<li> M. Martini, I. Riyanto, A. Krisna, and M. Suparmoko, An Effort to Lower Electricity Bill in University Building by Automatic Lighting Switches Application, Aug. 2017. [Online]. Available: https://www.researchgate.net/publication/323401202_An_Effort_to_Lower_Electricity_Bill_in_University_Building_by_Automatic_Lighting_Switches_Applicatio. [Accessed: 30-July-2021]. </li>
+</ol>
