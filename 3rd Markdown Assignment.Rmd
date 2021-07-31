@@ -18,7 +18,17 @@ Martini Martini, Indra Riyanto, Adiyarta Krisna, M. Suparmoko
 
 -----
 
-content
+As of writing this paper, the world is in hiatus from fully experiencing the world outside their homes.  In the midst of the COVID-19 pandemic, part of mitigating infection is the limitation of physical interactions among human beings.  With that, one solution set by the governments across various nations is putting their countries in quarantine.  While this certainly helps prevent the spread of the virus, there are other accompanying deficiencies in this solution beyond the virus.  One of which is the rise in household utility bills such as electricity.  During the pandemic, Filipino families have relied on electrically powered appliances such as air conditioners, televisions, and the like for comfort and entertainment.  With that, they also result in higher, sometimes unprecedented, electricity charges. 
+
+<br>
+
+Given this timely issue, solutions should be explored and implemented surrounding concepts of energy reduction and cost efficiency.  With that, the group came across an Indonesian academic article written by (authors) which tackles a simple yet impactful solution to  reducing the cost of electrical bills.  They identified that one of the most overlooked factors to heightened electricity bill prices is the constant usage of light bulbs and lamps.  Using fundamental concepts of electronics and programming, the researchers were able to test automatic light switches (sensor-based) against manual, traditional light switches in public restrooms as these are places wherein light is left on for long periods of time - therefore implying larger energy consumption and cost.
+	
+<br>
+
+The study included 13 different samples depending on duration wherein the following essential data were obtained:  energy consumption with the sensor, energy consumption without the sensor, cost in Indonesian Rupiah (Rp) with the sensor, and the cost in Rp without the sensor.  However, the group ultimately decided to focus on energy consumption with the sensor as well as energy consumption without the sensor since conclusions regarding cost can immediately be drawn from these sets of data.  These were obtained by determining how much electrical power in kilowatt hour (kWh) was consumed at various fixed periods of time and comparing data with the sensor and with its absence.  In conclusion, the group would like to determine whether the application of sensor-based light switches can help decrease electricity consumption.
+
+<br><br><br>
 
 ## Methodology
 
