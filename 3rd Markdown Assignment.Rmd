@@ -72,7 +72,7 @@ $$
   \sigma=\sqrt{40.71168074359}
 $$
 $$
-  	\sigma=6.3805705656775
+  	\sigma=6.3805705656775 ≈ 6.4
 $$
 :::
 
@@ -100,13 +100,19 @@ $$
   \sigma=\sqrt{324.60685374359}
 $$
 $$
-  	\sigma=18.016849162481 
+  	\sigma=18.016849162481 ≈ 18
 $$
 :::
 
 ::::
 
+<br><br><br>
 
+## Results
+
+### **Results**
+
+-----
 
 ### **Using the 7-Step Approach**
 
@@ -115,10 +121,10 @@ We are interested in $\mu_a$ and $\mu_b$, specifically the difference between th
 
 
 #### **Step 2: Stating Null Hypothesis**
-The null hypothesis would be as follows$H_0 : \mu_A = \mu_b$ saying that there is no significant difference between the energy consumption with the sensor and without it.<br><br>
+The null hypothesis would be as follows $H_0 : \mu_A = \mu_b$ saying that there is no significant difference between the energy consumption with the sensor and without it.<br><br>
 
 #### **Step 3: Stating Alternative Hypothesis**
-The alternative hypothesis would be as follows $H_1 : \mu_A < \mu_B$ saying that there is a significant difference between the energy consumption with the sensor and without it.<br><br>
+The alternative hypothesis would be as follows $H_1 : \mu_A < \mu_B$ saying that the energy consumption without the sensor would be significantly greater than with the use of the sensor..<br><br>
 
 #### **Step 4: Determining Appropriate Test Statistic**
 Since the mean and standard deviation are known (refer to the Methodology section), and the sample is less than 30, then the appropriate test statistic is defined by the formula: 
@@ -176,14 +182,6 @@ Therefore, the **probability of $P(t\ge -3.08)$ is approximately 0.004.**<br><br
 
 #### **Step 7: Conclusion** 
 Since  **0.004 is significantly less than 0.05**, we reject the null hypothesis. Therefore, we can come to a conclusion that the energy consumption without the use of a sensor is significantly greater than when using a sensor.
-
-
-
-
-## Results
-
-### **Results**
-
 
 -----
 
