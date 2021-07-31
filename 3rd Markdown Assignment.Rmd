@@ -47,24 +47,36 @@ content
 
 **Table for with sensors**
 
+x= duration
+y= with sensors
+z= energy duration
+
+```{r}
+T_ws <- data.frame(  
+                    n               =1:13,
+                    Duration        =c(1,7,14,21,28,35,42,49,56,63,70,77,84),
+                    With_Sensors    =c(0.504,2.711,5.058,7.158,8.890,10.622,12.264,13.816,15.278,16.651,17.933,19.126,20.229),
+                    Energy_Reduction=c(24.10,41.67,45.59,48.66,52.18,54.29,56.02,57.54,58.91,60.20,61.42,62.59,63.73)
+                  )
+
+
+```
 
 
 ```{r}
+knitr::kable(T_ws, caption = '**Table 1**' )
+```
 
 
-Tws = data.frame( duration =        c(1,7,14,21,28,35,42,49,56,63,70,77,84),
-                  with_sensor =  c(0.504, 2.711, 5.058, 7.158, 8.890, 10.622, 12.264, 13.816, 15.278,16.651,17.933, 19.126, 20.229),
-                  energy_duration = c(24.10, 41.67, 45.59, 48.66, 52.18, 54.29,56.02, 57.54, 58.91, 60.20, 61.42, 62.59, 63.73))
-
-Tws
 
 
+
+```{r}
 y=c(1,7,14,21,28,35,42,49,56,63,70,77,84)
-x=c(0.504, 2.711, 5.058, 7.158, 8.890, 10.622,                                          12.264, 13.816, 15.278,16.651,17.933, 19.126,                                      20.229)
-z=c(24.10, 41.67, 45.59, 48.66, 52.18, 54.29,                                           56.02, 57.54, 58.91, 60.20, 61.42, 62.59,                                           63.73)
-
-
-plot(x~y,
+x=c(0.504,2.711,5.058,7.158,8.890,10.622,12.264,13.816,15.278,16.651,17.933,19.126,20.229)
+z=c(24.10,41.67,45.59,48.66,52.18,54.29,56.02,57.54,58.91,60.20,61.42,62.59,63.73)
+plot(
+     x~y,
      main = "Energy Consumption WITH Sensors",
      xlab= "Duration (Hours)",
      ylab = "Electrical Power (kWh)",
@@ -72,32 +84,19 @@ plot(x~y,
      ylim = c(0, 60),
      col = "red",
      pch=21,  
-     bg="red")
+     bg="red"
+    )
 
-lines(x~y,
-     bg="red")
+lines(
+      x~y,
+      bg="red"
+     )
 
 line=lm(x~y)
 abline(line, col="blue")
 
 
 ```
-
-[yada yada]
-
-```{r}
-library(tidyverse)
-library(DT)
-
-iris %>%
-  datatable(extensions = 'Buttons',
-            options = list(dom = 'Blfrtip',
-                           buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
-                           lengthMenu = list(c(10,25,50,-1),
-                                             c(10,25,50,"All"))))
-```
-
-
 
 
 
@@ -106,33 +105,40 @@ iris %>%
 **Table for without sensors**
 
 ```{r}
-Twos = data.frame( duration =        c(1,7,14,21,28,35,42,49,56,63,70,77,84),
-                  without_sensor =  c(0.664, 4.648, 9.296, 13.944, 18.592, 23.24,                                                                              27.888, 32.536, 37.184, 41.832, 46.48,                                                                                   51.128, 55.776 ), 
-                  energy_duration = c(24.10, 41.67, 45.59, 48.66, 52.18, 54.29,                                                                                 56.02, 57.54, 58.91, 60.20, 61.42, 62.59,                                                                              63.73))
 
-Twos
+
+T_wos <- data.frame(  
+                    n                  =1:13,
+                    Duration           =c(1,7,14,21,28,35,42,49,56,63,70,77,84),
+                    Without_Sensors    =c(0.664,4.648,9.296,13.944,18.592,23.24,27.888,32.536,37.184,41.832,46.48,51.128,55.776),
+                    Energy_Reduction   =c(24.10,41.67,45.59,48.66,52.18,54.29,56.02,57.54,58.91,60.20,61.42,62.59,63.73)
+                  )
+knitr::kable(T_wos, caption = '**Table 2**' )
 
 ```
 
 [yADA]
 ```{r}
 y=c(1,7,14,21,28,35,42,49,56,63,70,77,84)
-x=c(0.664, 4.648, 9.296, 13.944, 18.592, 23.24,                                         27.888, 32.536, 37.184, 41.832, 46.48,                                              51.128, 55.776 )
-z=c(24.10, 41.67, 45.59, 48.66, 52.18, 54.29,                                           56.02, 57.54, 58.91, 60.20, 61.42, 62.59,                                           63.73)
+x=c(0.664,4.648,9.296,13.944,18.592,23.24,27.888,32.536,37.184,41.832,46.48,51.128,55.776)
+z=c(24.10,41.67,45.59,48.66,52.18,54.29,56.02,57.54,58.91,60.20,61.42,62.59,63.73)
 
 
-plot(x~y,
+plot(
+     x~y,
      main = "Energy Consumption WITHOUT Sensors",
-     xlab= "Duration (Hours)",
+     xlab = "Duration (Hours)",
      ylab = "Electrical Power (kWh)",
-     cex= 1,
+     cex  = 1,
      ylim = c(0, 60),
-     col = "blue",
-     pch=21,  
-     bg="blue")
+     col  = "blue",
+     pch  =21,  
+     bg   ="blue")
 
-lines(x~y,
-     bg="red")
+lines(
+      x~y,
+      bg="red"
+     )
 
 line=lm(x~y)
 abline(line, col="red")
@@ -142,39 +148,38 @@ abline(line, col="red")
 
 
 ```{r}
-a =  c(0.504, 2.711, 5.058, 7.158, 8.890, 10.622, 12.264, 13.816, 15.278,16.651,17.933, 19.126, 20.229)
-b =  c(0.664, 4.648, 9.296, 13.944, 18.592, 23.24, 27.888, 32.536, 37.184, 41.832, 46.48,51.128, 55.776 )
+a = c(0.504,2.711,5.058,7.158,8.890,10.622,12.264,13.816,15.278,16.651,17.933,19.126,20.229)
+b = c(0.664,4.648,9.296,13.944,18.592,23.24,27.888,32.536,37.184,41.832,46.48,51.128,55.776)
  
  
- test = a/b
- 
- 
+test  = a/b
 test2 = 1-test
-  
-test3=  test2*100
+test3 = test2*100
 
 
-test3
- 
+knitr::kable(test3, caption = '**Percentage of Reduction over time**' ) 
  
 ```
 
 
 ```{r}
 
-
-
-plot(test3~y,
+plot(
+     test3~y,
      xlab="duration",
      ylab="Energy Reduction (%)",
      main= "Energy Reduction per week ",
-      cex= 1,
+     cex= 1,
      ylim = c(0, 65),
      col = "blue",
      pch=21,  
-     bg="blue")
-lines(test3~y,
-     bg="blue")
+     bg="blue"
+    )
+
+lines(
+      test3~y,
+      bg="blue"
+     )
 
 line=lm(test3~y)
 abline(line, col="red")
