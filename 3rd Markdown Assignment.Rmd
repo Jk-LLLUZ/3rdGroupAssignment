@@ -33,8 +33,9 @@ content
 ### **Results**
 
 
-
 -----
+
+**Table for with sensors**
 ```{r}
 Tws = data.frame( duration =        c(1,7,14,21,28,35,42,49,56,63,70,77,84),
                   With_Sensor =     c(0.05, 2.711, 5.058, 7.158, 8.890, 10.622,                                           12.264, 13.816, 15.278,16.651,17.933, 19.126,                                       20.229), 
@@ -42,7 +43,7 @@ Tws = data.frame( duration =        c(1,7,14,21,28,35,42,49,56,63,70,77,84),
 Tws
 ```
 
-
+**Table for without sensors**
 
 ```{r}
 Twos = data.frame( duration =        c(1,7,14,21,28,35,42,49,56,63,70,77,84),
