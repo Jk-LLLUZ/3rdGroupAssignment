@@ -50,7 +50,7 @@ We, the researchers, will conduct a hypothesis test and the next step would be i
 
 :::: {}
 
-#### **With Sensor**
+#### **With Sensors**
 
 ##### Mean
 
@@ -78,7 +78,7 @@ $$
 
 :::{}
 
-#### **Without Sensor**
+#### **Without Sensors**
 
 ##### Mean
 
