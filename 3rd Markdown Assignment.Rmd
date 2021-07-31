@@ -351,6 +351,8 @@ abline(line, col="red")
 
 =======
 >>>>>>> 743a46ec16591f0a9beffbefb9c56f3015dd65b6
+
+
 ## Discussion and Conclusion
 
 
