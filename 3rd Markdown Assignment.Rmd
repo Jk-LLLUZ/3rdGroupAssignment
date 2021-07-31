@@ -38,27 +38,42 @@ The study conducted by Martini et al. included 13 different samples depending on
 
 -----
 
-In this paper, an infrared-based sensor namely Passive Infrared Receiver or PIR is used to detect body movements present. Based on its name, PIR is a passive type of sensor meaning by itself, it does not emit infrared radiations. With this distinct quality, PIR is the suitable device to use in this study as the detected heat radiation is solely caused by human presence and body movements, creating a more controlled environment guaranteed from external errors.
+In this paper, an infrared-based sensor namely Passive Infrared Receiver or PIR (*refer to Figure 1*) is used to detect body movements present. Based on its name, PIR is a passive type of sensor meaning by itself, it does not emit infrared radiations. With this distinct quality, PIR is the suitable device to use in this study as the detected heat radiation is solely caused by human presence and body movements, creating a more controlled environment guaranteed from external errors.
 
 <br>
 
-With the goal to identify whether the sensors will decrease power consumption and consequently the cost, the Indonesian authors used the simplest way to obtain results. The plan was to compare the Electrical power consumed (in kWh) before and after the sensors’ installations. The experiment room to be used was a public restroom in their building, since restrooms are places where people come and go, making it an appropriate set-up for the experiment. The authors then installed the sensors on the electrical appliances (lamps and exhaust fans) to obtain a wide area of the room, and the Electrical Power Consumption Meter for the facilitation of data measurement. After measuring the power consumption every 7 hours for 13 times, the sensors and program were now activated and the second half of the reading and measuring proceeded.
+With the goal to identify whether the sensors will decrease power consumption and consequently the cost, the Indonesian authors used the simplest way to obtain results. The plan was to compare the Electrical power consumed (in kWh) before and after the sensors’ installations. The experiment room to be used was a public restroom in their building, since restrooms are places where people come and go, making it an appropriate set-up for the experiment. The authors then installed the sensors on the electrical appliances —lamps and exhaust fans— (*refer to Figure 2*) to obtain a wide area of the room, and the Electrical Power Consumption Meter (*refer to Figure 3*) for the facilitation of data measurement. After measuring the power consumption every 7 hours for 13 times, the sensors and program were now activated and the second half of the reading and measuring proceeded.
 
 <br>
 
 We, the researchers, will conduct a hypothesis test and the next step would be identifying the parameters. The parameters to be calculated are the means and standard deviations of both variables. The sample of both variables are the same which is 13 and lastly, we will use a 5% confidence interval for this hypothesis test.
 
-<br>
+-----
 
-<center>
+:::: {style="display: flex; justify-content: space-evenly"}
 
-![](https://postimg.cc/S2zyqcdD)
+::: {}
 
-![](https://i.postimg.cc/4353G5w7/Measuring-gadget.png)
+![Figure 1. Passive Infrared Receiver](https://i.postimg.cc/DZmPRFX8/PIR.png){width="100%"}
 
-![](https://i.postimg.cc/Fz2rpnFq/Sensor-installation.png)
+:::
 
-</center>
+::: {}
+
+![Figure 2. Installation of Sensors](https://i.postimg.cc/027dTVbd/Sensor-installation.png){width="100%"}
+
+:::
+
+::: {}
+
+![Figure 3. Electrical Power Consumption Meter](https://i.postimg.cc/4dKpB5Dc/Measuring-gadget.png){width="100%"}
+:::
+
+::::
+
+------
+
+### Identifying the Parameters
 
 :::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
 
@@ -367,11 +382,20 @@ Eight 23W lights and six 80W exhaust fans were among the electric equipment plac
 According to the first two tables and plots, the consumption has been reduced to half of what it was before after 28 hours of operation. After 84 hours of operation, the reduction reached 63.73%. With these two figures, we can conclude the energy reduction per week. 
 
 
+The researchers conducted a hypothesis testing and identified the parameters. The parameters are the means and the standard deviations of both variables - wherein the variable with sensor has a mean of 11.6 and a standard deviation of 6.38; while the variable without the sensor has a mean of 27.9 and a standard deviation of 18.07. With this, the researchers used the 7-Step Approach in identifying and comparing the power consumption with and without the use of sensors. 
+
+
+The first step is **identifying the parameter of interest**, which is the difference between the energy consumption (kWh) with and without the use of sensors. The second step is **stating the null hypothesis**, where it states that there would be no difference between the energy consumption (kWh) with the usage of sensors or not. The third step is **stating the alternative hypothesis**, where it states that there would be a significant difference between the energy consumption (kWh) of operating the with the usage of sensors or not. The fourth step is **determining the appropriate test statistic**, where the researchers used the appropriate test formula, which is T-test. The fifth step is to **Reject the H_o if** the p-value is less than 0.05. Along with this, the researchers also calculated for the Degree of Freedom. The sixth step is the **Computations** by using the T-test formula in step 4. The probability of $P(t \ge 3.08)$ is then calculated by first calculating the degrees of freedom. Then, using the R function pt(t, df), we can calculate this probability and compare it to our level of significance, which is equal to $\alpha= 0.05$. Therefore, the probability of $P(t \ge -3.08)$  is approximately 0.004.
+
+
+
 ### **Conclusion**
 
 -----
 
-According to the results that were found during the testing and experiment, there were still insignificance in the first hours of cost savings. However, the savings had increased considerably to over 60% overtime after one week. According to this report, it is significantly shown that longer duration of operation hours leads to higher energy reduction. 
+Based on the result of the 7-Step approach, the **null hypothesis** was **rejected** as 0.0004 is significantly less than 0.05. With this, we can conclude that the energy usage without a sensor is substantially higher than when a sensor is used, proving the PIRs to be successful in lowering power consumption. Additionally, according to the results that were found during the testing and experiment, there were still insignificance in the first hours of cost savings. However, the savings had increased considerably to over 60% overtime after one week. 
+
+<br><br>
  
 
 ## References
