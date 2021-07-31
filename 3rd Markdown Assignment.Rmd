@@ -221,6 +221,24 @@ abline(line, col="red")
 
 
 
+**7 STEP PROCESS:**
+
+Parameter of Interest
+
+Stating Null Hypothesis
+
+Stating Alternative Hypothesis
+
+Determining Appropriate Test Statistic
+
+Reject Ho if
+
+Computations
+
+Conclusion
+
+
+
 
 ## Discussion and Conclusion
 
