@@ -36,7 +36,20 @@ The study conducted by Martini et al. included 13 different samples depending on
 
 -----
 
-content
+$$
+  \sigma=\sqrt{(\frac{1}{n-1})\sum_{i=1}^{n}{(x_i - \bar{x})^2}}
+$$
+
+$$
+  \sigma=\sqrt{\frac{488.54016892308}{13-1}}
+$$
+
+$$
+  \sigma=\sqrt{40.71168074359}
+$$
+$$
+  	\sigma=6.3805705656775
+$$
 
 ## Results
 
