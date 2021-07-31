@@ -111,26 +111,8 @@ $$
 ### **Using the 7-Step Approach**
 
 #### **Step 1: Parameter of Interest**
-<<<<<<< HEAD
 We are interested in $\mu_a$ and $\mu_b$, specifically the difference between the energy consumption in kilowatt hours of using the sensor and without the sensor. <br><br>
-=======
-With sensor: 
-$$
-  \overline{x} = 11.6
-$$
 
-$$
-  \sigma = 6.4
-$$
-
-Without sensor:
-$$
-  \overline{x} = 27.9
-$$  
-$$
-  \sigma = 18
-$$
->>>>>>> e37b6d48ae8426423e018f7b14390b70fe2272f2
 
 #### **Step 2: Stating Null Hypothesis**
 The null hypothesis would be as follows$H_0 : \mu_A = \mu_b$ saying that there is no significant difference between the energy consumption with the sensor and without it.<br><br>
