@@ -36,6 +36,13 @@ The study conducted by Martini et al. included 13 different samples depending on
 
 -----
 
+In this paper, an infrared-based sensor namely Passive Infrared Receiver or PIR is used to detect body movements present. Based on its name, PIR is a passive type of sensor meaning by itself, it does not emit infrared radiations. With this distinct quality, PIR is the suitable device to use in this study as the detected heat radiation is solely caused by human presence and body movements, creating a more controlled environment guaranteed from external errors.
+
+With the goal to identify whether the sensors will decrease power consumption and consequently the cost, the Indonesian authors used the simplest way to obtain results. The plan was to compare the Electrical power consumed (in kWh) before and after the sensors’ installations. The experiment room to be used was a public restroom in their building, since restrooms are places where people come and go, making it an appropriate set-up for the experiment. The authors then installed the sensors on the electrical appliances (lamps and exhaust fans) to obtain a wide area of the room, and the Electrical Power Consumption Meter for the facilitation of data measurement. After measuring the power consumption every 7 hours for 13 times, the sensors and program were now activated and the second half of the reading and measuring proceeded.
+
+We, the researchers, will conduct a hypothesis test and the next step would be identifying the parameters.
+
+
 $$
   \sigma=\sqrt{(\frac{1}{n-1})\sum_{i=1}^{n}{(x_i - \bar{x})^2}}
 $$
