@@ -85,6 +85,10 @@ T_ws <- data.frame(
                   )
 
 knitr::kable(T_ws, caption = '**Table 1**' )
+
+
+
+
 ```
 
 
