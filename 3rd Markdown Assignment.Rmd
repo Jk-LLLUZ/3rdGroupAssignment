@@ -12,8 +12,47 @@ output:
 
 ## Introduction
 
+### Introduction
+
+-----
+
+content
+
 ## Methodology
+
+### Methodology
+
+-----
+
+content
 
 ## Results
 
+### Results
+
+-----
+
+content
+
 ## Discussion and Conclusion
+
+
+### Discussion
+
+-----
+
+content
+
+### Conclusion
+
+-----
+
+content
+
+## References
+
+### References
+
+-----
+
+content
