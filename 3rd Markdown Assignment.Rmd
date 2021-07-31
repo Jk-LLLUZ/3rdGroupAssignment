@@ -309,7 +309,7 @@ df3 <- data.frame(
                     y = c(0.664,4.648,9.296,13.944,18.592,23.24,27.888,32.536,37.184,41.832,46.48,51.128,55.776),
                     test3
                    )
-knitr::kable(df3, caption = '**Table 2**' )
+knitr::kable(df3, caption = '**With the given data, we have compared the values of the electrical power consumption by those with sensors to those without. When annalyzing data, it was observed that the value of energy consumption with sensors reduced in a given time in a range of 24% upto 64%. The plot observed has also shown a reduction of energy consumption in a given interval of time. **' )
 
  
 ```
