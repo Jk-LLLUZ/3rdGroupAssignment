@@ -37,11 +37,38 @@ content
 
 **Table for with sensors**
 ```{r}
-Tws = data.frame( duration =        c(1,7,14,21,28,35,42,49,56,63,70,77,84),
-                  With_Sensor =     c(0.05, 2.711, 5.058, 7.158, 8.890, 10.622,                                           12.264, 13.816, 15.278,16.651,17.933, 19.126,                                       20.229), 
-                  energy_duration = c(24.10, 41.67, 45.59, 48.66, 52.18, 54.29,                                           56.02, 57.54, 58.91, 60.20, 61.42, 62.59,                                           63.73))
-Tws
+y=c(1,7,14,21,28,35,42,49,56,63,70,77,84)
+x=c(0.05, 2.711, 5.058, 7.158, 8.890, 10.622,                                          12.264, 13.816, 15.278,16.651,17.933, 19.126,                                      20.229)
+z=c(24.10, 41.67, 45.59, 48.66, 52.18, 54.29,                                           56.02, 57.54, 58.91, 60.20, 61.42, 62.59,                                           63.73)
+
+
+plot(x~y,
+     main = "Energy Consumption WITH Sensors",
+     xlab= "Duration (Hours)",
+     ylab = "Electrical Power (kWh)",
+     cex= 1,
+     ylim = c(0, 60),
+     col = "red",
+     pch=21,  
+     bg="red")
+
+lines(x~y,
+     bg="red")
+
+line=lm(x~y)
+abline(line, col="blue")
+
+
 ```
+
+[yada yada]
+
+
+
+
+
+
+
 
 **Table for without sensors**
 
@@ -52,6 +79,30 @@ Twos = data.frame( duration =        c(1,7,14,21,28,35,42,49,56,63,70,77,84),
 
 Twos
 
+```
+
+[yADA]
+```{r}
+y=c(1,7,14,21,28,35,42,49,56,63,70,77,84)
+x=c(0.664, 4.648, 9.296, 13.944, 18.592, 23.24,                                         27.888, 32.536, 37.184, 41.832, 46.48,                                              51.128, 55.776 )
+z=c(24.10, 41.67, 45.59, 48.66, 52.18, 54.29,                                           56.02, 57.54, 58.91, 60.20, 61.42, 62.59,                                           63.73)
+
+
+plot(x~y,
+     main = "Energy Consumption WITHOUT Sensors",
+     xlab= "Duration (Hours)",
+     ylab = "Electrical Power (kWh)",
+     cex= 1,
+     ylim = c(0, 60),
+     col = "blue",
+     pch=21,  
+     bg="blue")
+
+lines(x~y,
+     bg="red")
+
+line=lm(x~y)
+abline(line, col="red")
 ```
 
   
