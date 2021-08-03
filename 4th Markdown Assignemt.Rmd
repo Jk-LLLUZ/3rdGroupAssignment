@@ -5,26 +5,154 @@ date: "8/3/2021"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+# Module 4 Markdown Assignement {.tabset}
 
-## R Markdown
+## Introfuction
+### **Introduction**
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+As of writing this paper, the world is in hiatus from fully experiencing the world outside their homes.  In the midst of the COVID-19 pandemic, part of mitigating infection is the limitation of physical interactions among human beings.  With that, one solution set by the governments across various nations is putting their countries in quarantine.  While this certainly helps prevent the spread of the virus, there are other accompanying deficiencies in this solution beyond the virus.  One of which is the rise in household utility bills such as electricity.  During the pandemic, Filipino families have relied on electrically powered appliances such as air conditioners, televisions, and the like for comfort and entertainment.  With that, they also result in higher, sometimes unprecedented, electricity charges.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+<br>
 
-```{r cars}
-summary(cars)
-```
+Given this timely issue, solutions should be explored and implemented surrounding concepts of energy reduction and cost efficiency.  With that, the group came across an Indonesian academic article written by Martini et al. which tackles a simple yet impactful solution to  reducing the cost of electrical bills.  They identified that one of the most overlooked factors to heightened electricity bill prices is the constant usage of light bulbs and lamps.  Using fundamental concepts of electronics and programming, the researchers were able to test automatic light switches (sensor-based) against manual, traditional light switches in public restrooms as these are places wherein light is left on for long periods of time - therefore implying larger energy consumption and cost.
+	
+<br>
 
-## Including Plots
+The study conducted by Martini et al. included 13 different samples depending on duration wherein the following essential data were obtained:  energy consumption with the sensor, energy consumption without the sensor, cost in Indonesian Rupiah (Rp) with the sensor, and the cost in Rp without the sensor.  However, the group ultimately decided to focus on energy consumption with the sensor as well as energy consumption without the sensor since conclusions regarding cost can immediately be drawn from these sets of data.  These were obtained by determining how much electrical power in kilowatt hour (kWh) was consumed at various fixed periods of time and comparing data with the sensor and with its absence.  In conclusion, the group would like to determine whether the application of sensor-based light switches can help decrease electricity consumption.
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+## Methodology
+### **Methodology**
+
+In this paper, an infrared-based sensor namely Passive Infrared Receiver or PIR (*refer to Figure 1*) is used to detect body movements present. Based on its name, PIR is a passive type of sensor meaning by itself, it does not emit infrared radiations. With this distinct quality, PIR is the suitable device to use in this study as the detected heat radiation is solely caused by human presence and body movements, creating a more controlled environment guaranteed from external errors.
+
+<br>
+
+With the goal to identify whether the sensors will decrease power consumption and consequently the cost, the Indonesian authors used the simplest way to obtain results. The plan was to compare the Electrical power consumed (in kWh) before and after the sensors’ installations. The experiment room to be used was a public restroom in their building, since restrooms are places where people come and go, making it an appropriate set-up for the experiment. The authors then installed the sensors on the electrical appliances —lamps and exhaust fans— (*refer to Figure 2*) to obtain a wide area of the room, and the Electrical Power Consumption Meter (*refer to Figure 3*) for the facilitation of data measurement. After measuring the power consumption every 7 hours for 13 times, the sensors and program were now activated and the second half of the reading and measuring proceeded.
+
+<br>
+
+We, the researchers, will conduct a hypothesis test and the next step would be identifying the parameters. The parameters to be calculated are the means and standard deviations of both variables. The sample of both variables are the same which is 13 and lastly, we will use a 5% confidence interval for this hypothesis test.
+
+-----
+
+:::: {style="display: flex; justify-content: space-evenly"}
+
+::: {}
+
+![Figure 1. Passive Infrared Receiver](https://i.postimg.cc/DZmPRFX8/PIR.png){width="100%"}
+
+:::
+
+::: {}
+
+![Figure 2. Installation of Sensors](https://i.postimg.cc/027dTVbd/Sensor-installation.png){width="100%"}
+
+:::
+
+::: {}
+
+![Figure 3. Electrical Power Consumption Meter](https://i.postimg.cc/4dKpB5Dc/Measuring-gadget.png){width="100%"}
+:::
+
+::::
+
+------
+
+### Identifying the Parameters
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
+
+:::: {}
+
+#### **With Sensors**
+
+##### Mean
+
+$$
+  \overline{x} = 11.6
+$$
+
+##### Standard Deviation
+
+$$
+  \sigma=\sqrt{(\frac{1}{n-1})\sum_{i=1}^{n}{(x_i - \bar{x})^2}}
+$$
+
+$$
+  \sigma=\sqrt{\frac{488.54016892308}{13-1}}
+$$
+
+$$
+  \sigma=\sqrt{40.71168074359}
+$$
+$$
+  	\sigma=6.3805705656775 ≈ 6.4
+$$
+:::
+
+:::{}
+
+#### **Without Sensors**
+
+##### Mean
+
+$$
+  \overline{x} = 27.9
+$$
+
+##### Standard Deviation
+
+$$
+  \sigma=\sqrt{(\frac{1}{n-1})\sum_{i=1}^{n}{(x_i - \bar{x})^2}}
+$$
+
+$$
+  \sigma=\sqrt{\frac{3895.2822449231}{13-1}}
+$$
+
+$$
+  \sigma=\sqrt{324.60685374359}
+$$
+$$
+  	\sigma=18.016849162481 ≈ 18
+$$
+:::
+
+::::
+
+
+
+
+## Results
+### **Results**
+
+
+
+
+
+
+## Discussion and Conclution
+### **Results**
+
+
+
+
+
+
+## References
+### **References**
+
+
+<ol>
+<li> H. A. Fernandez, “As power Bills surge amid Covid-19, WILL PROSUMERS be the philippines' next big Energy trend?,” Eco, 06-Oct-2020. 
+    [Online]. Available: https://www.eco-business.com/news/as-power-bills-surge-amid-covid-19-will-prosumers-be-the-philippines-next-big-energy-trend/. [Accessed: 31-Jul-2021]. </li>
+<br>
+<li> M. Martini, I. Riyanto, A. Krisna, and M. Suparmoko, An Effort to Lower Electricity Bill in University Building by Automatic Lighting Switches Application, Aug. 2017. [Online]. Available: https://www.researchgate.net/publication/323401202_An_Effort_to_Lower_Electricity_Bill_in_University_Building_by_Automatic_Lighting_Switches_Applicatio. [Accessed: 30-July-2021]. </li>
+</ol>
+
+
+
