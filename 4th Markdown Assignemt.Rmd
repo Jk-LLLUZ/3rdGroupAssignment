@@ -1,13 +1,16 @@
 ---
 title: "4th Markdown Assignement"
-author: "John Kyle C. Lluz"
-date: "8/3/2021"
-output: html_document
+author: "Gian Carlo Fernandez, John Kyle LLuz, Adrian Enrico Rodriguez, Iris Salangad"
+date: "8/5/2021"
+output:
+    html_document:
+    highlight: pygments
+    theme: default
 ---
 
 # Module 4 Markdown Assignement {.tabset}
 
-## Introfuction
+## Introduction
 ### **Introduction**
 
 As of writing this paper, the world is in hiatus from fully experiencing the world outside their homes.  In the midst of the COVID-19 pandemic, part of mitigating infection is the limitation of physical interactions among human beings.  With that, one solution set by the governments across various nations is putting their countries in quarantine.  While this certainly helps prevent the spread of the virus, there are other accompanying deficiencies in this solution beyond the virus.  One of which is the rise in household utility bills such as electricity.  During the pandemic, Filipino families have relied on electrically powered appliances such as air conditioners, televisions, and the like for comfort and entertainment.  With that, they also result in higher, sometimes unprecedented, electricity charges.
@@ -61,6 +64,8 @@ We, the researchers, will conduct a hypothesis test and the next step would be i
 ::::
 
 ------
+
+
 
 ### Identifying the Parameters
 
@@ -129,6 +134,196 @@ $$
 
 ## Results
 ### **Results**
+
+```{r, echo= FALSE, fig.width = 5, fig.height = 3}
+df1 <- data.frame(  
+                    n             = 1:13,
+                    Duration      = c(1,7,14,21,28,35,42,49,56,63,70,77,84),
+                    With_Sensors  = c(0.504,2.711,5.058,7.158,8.890,10.622,12.264,13.816,15.278,16.651,17.933,19.126,20.229)
+                    
+                  )
+
+knitr::kable(df1, caption = '**Electrical Power with Sensors**' )
+
+
+
+
+```
+
+```{r, echo= FALSE}
+  y <- c(1,	7,	14,	21,	28,	35,	42,	49,	56,	63, 70,	77,	84)
+  x <- c(0.504,	2.711, 5.058,	7.158,	8.890,	10.622,	12.264,	13.816,	15.278,	16.651,	17.933,	19.126,	20.229)
+  plot(x, y, pch = 16, cex = 1, col = "blue", main = "Relation between Electricity Consumption with Sensor and Time", xlab = "Electricity Consumption (kWh)", ylab = "Duration (h)")
+  lm(y ~ x)
+  abline(lm(y ~ x))
+```
+
+
+<br>
+
+#### Simple Linear Regression 
+
+Given the set of x and y values, we can determine the simple linear regression model using the **least squares method.**  This method is best represented by the equation:
+
+<center>
+  $\hat{y}=\hat{\beta_0}+\hat{\beta_1}x$ <br><br>
+</center>
+
+It is worth taking note that this is **reminiscent of the slope intercept form** $y=mx+b$. <br><br>
+
+With that, we would have to solve for the following values and summations at $n=13$: <br><br>
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
+
+:::: {}
+
+Summation of $x_i$
+$$
+  \sum_{i=1}^{13}{x_i}
+$$
+$$
+  \sum_{i=1}^{13}{x_i}=150.24
+$$
+<br>
+Mean of $x_i$
+
+$$
+  \bar{x_i}= \frac{\sum_{i=1}^{13}{x_i}}{n}
+$$
+$$
+  \bar{x_i}= \frac{150.24}{13}
+$$
+$$
+  \bar{x_i}= 11.55692308 \approx 11.56
+$$
+
+<br>
+
+Summation of squares of $x_i$ 
+
+$$
+  \sum_{i=1}^{13}x_i^2
+$$
+$$
+  \sum_{i=1}^{13}=2224.85229\approx2224.85
+$$
+
+
+:::
+
+:::{}
+
+Summation of $y_i$
+
+$$
+  \sum_{i=1}^{13}{y_i}
+$$
+$$
+  \sum_{i=1}^{13}{y_i}=547
+$$
+<br>
+
+Mean of $y_i$
+
+$$
+  \bar{y_i}= \frac{\sum_{i=1}^{13}{y_i}}{n}
+$$
+$$
+  \bar{y_i}= \frac{547}{13}
+$$
+$$
+  \bar{y_i}= 42.07692308 \approx 42.08
+$$
+
+<br>
+
+Summation of squares of $y_i$
+$$
+  \sum_{i=1}^{13}y_i^2
+$$
+$$
+  \sum_{i=1}^{13}=31,851
+$$
+
+:::
+
+::::
+
+Summation of $x_i$ times $y_i$
+
+  $$
+    \sum_{i = 1}^{20} x_i y_1
+  $$
+  $$
+    \sum_{i = 1}^{20} =8385.202\approx8385.20
+  $$
+
+
+
+With these values solved for already, we may proceed to solving for $S_{xy}$ and $S_{xx}$ using the formulae below: <br><br>
+
+**For $S_{xx}$**
+$$
+  S_{xx} = \sum_{i = 1}^{n} x_i^2 - \frac{(\sum_{i = 1}^{n} x_i)^2}{n}
+$$
+
+<br>**For $S_{xy}$**
+$$
+  S_{xy} = \sum_{i = 1}^{n} x_i y_i - \frac{(\sum_{i = 1}^{n} x_i)(\sum_{i = 1}^{n} y_i)}{n}
+$$
+Since the values have already been solved for, we proceed to substituting as follows:
+
+**For $S_{xx}$**
+$$
+  S_{xx} = \sum_{i = 1}^{n} x_i^2 - \frac{(\sum_{i = 1}^{n} x_i)^2}{n}
+$$
+$$
+  S_{xx} = 2224.85 - \frac{150.24^2}{13}
+$$
+$$
+  S_{xx} = 488.5378769\approx488.54
+$$
+
+**For $S_{xy}$**
+
+$$
+  S_{xy} = 8385.20 - \frac{(150.24)(547)}{13}
+$$
+$$
+  S_{xy} = 2,063.563077 \approx 2,063.56
+$$
+Now that both have been solved for, we can now **calculate the estimates for regression coefficients as follows:**
+
+**For $\hat{\beta_1}$**
+$$
+  \hat{\beta_1}= \frac{S_{xy}}{S_{xx}}
+$$
+$$
+  \hat{\beta_1}= \frac{2,063.563077}{448.5378769}
+$$
+$$
+  \hat{\beta_1}= 4.223932534\approx4.224
+$$
+
+**For $\hat{\beta_0}$**
+$$
+  \hat{\beta_0}=\overline{y}-\hat{\beta_1} \overline{x}
+$$
+$$
+  \hat{\beta_0}=42.07692308 - (4.223932534)(11.55692308)
+$$
+$$
+  \hat{\beta_0}=-6.738740311\approx-6.739
+$$
+This leaves with the equation for the best fit line or **the fitted simple linear regression model:**
+
+$$
+  \hat{y}=4.223932534x--6.738740311
+$$
+
+----- 
+
+3rd markdown 
 
 ### **Using the 7-Step Approach**
 
