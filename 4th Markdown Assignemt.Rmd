@@ -13,6 +13,12 @@ output:
 ## Introduction
 ### **Introduction**
 
+-----
+
+![](https://www.electrocuted.com/wp-content/uploads/2016/09/utility-pole-transformers.png)
+
+-----
+
 As of writing this paper, the world is in hiatus from fully experiencing the world outside their homes.  In the midst of the COVID-19 pandemic, part of mitigating infection is the limitation of physical interactions among human beings.  With that, one solution set by the governments across various nations is putting their countries in quarantine.  While this certainly helps prevent the spread of the virus, there are other accompanying deficiencies in this solution beyond the virus.  One of which is the rise in household utility bills such as electricity.  During the pandemic, Filipino families have relied on electrically powered appliances such as air conditioners, televisions, and the like for comfort and entertainment.  With that, they also result in higher, sometimes unprecedented, electricity charges.
 
 <br>
@@ -21,9 +27,9 @@ Given this timely issue, solutions should be explored and implemented surroundin
 	
 <br>
 
-The study conducted by Martini et al. included 13 different samples depending on duration wherein the following essential data were obtained:  energy consumption with the sensor, energy consumption without the sensor, cost in Indonesian Rupiah (Rp) with the sensor, and the cost in Rp without the sensor.  However, the group ultimately decided to focus on energy consumption with the sensor as well as energy consumption without the sensor since conclusions regarding cost can immediately be drawn from these sets of data.  These were obtained by determining how much electrical power in kilowatt hour (kWh) was consumed at various fixed periods of time and comparing data with the sensor and with its absence.  In conclusion, the group would like to determine whether the application of sensor-based light switches can help decrease electricity consumption.
+While Martini et al. provided various data in their study regarding the effectiveness of using a sensor in contrast to without using  a sensor, the group would like to determine its effectiveness over time.  This is part of the group’s quest to find whether using a sensor is a good long term solution to reducing energy consumption and cost.  With that, the group focused on two variables which are the energy consumption with a sensor (kWh), and the duration (hr) it is being observed over 7 hour intervals.  These number of observations amounted to 13 which also serves as the sample size of the study.
 
-
+<br><br><br>
 
 
 
@@ -252,10 +258,10 @@ $$
 Summation of $x_i$ times $y_i$
 
   $$
-    \sum_{i = 1}^{20} x_i y_1
+    \sum_{i = 1}^{13} x_i y_1
   $$
   $$
-    \sum_{i = 1}^{20} =8385.202\approx8385.20
+    \sum_{i = 1}^{13} =8385.202\approx8385.20
   $$
 
 
