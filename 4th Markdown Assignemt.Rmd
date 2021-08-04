@@ -1,5 +1,5 @@
 ---
-title: "4th Markdown Assignement"
+title: "4th Markdown Assignment"
 author: "Gian Carlo Fernandez, John Kyle LLuz, Adrian Enrico Rodriguez, Iris Salangad"
 date: "8/5/2021"
 output:
@@ -8,7 +8,7 @@ output:
     theme: default
 ---
 
-# Module 4 Markdown Assignement {.tabset}
+# Module 4 Markdown Assignment {.tabset}
 
 ## Introduction
 ### **Introduction**
