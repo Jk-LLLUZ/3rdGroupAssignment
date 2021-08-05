@@ -191,16 +191,16 @@ $$
   \sum_{i=1}^{13}{x_i}=150.24
 $$
 <br>
-Mean of $x_i$
+Mean of $x$
 
 $$
-  \bar{x_i}= \frac{\sum_{i=1}^{13}{x_i}}{n}
+  \bar{x}= \frac{\sum_{i=1}^{13}{x_i}}{n}
 $$
 $$
-  \bar{x_i}= \frac{150.24}{13}
+  \bar{x}= \frac{150.24}{13}
 $$
 $$
-  \bar{x_i}= 11.55692308 \approx 11.56
+  \bar{x}= 11.55692308 \approx 11.56
 $$
 
 <br>
@@ -229,16 +229,16 @@ $$
 $$
 <br>
 
-Mean of $y_i$
+Mean of $y$
 
 $$
-  \bar{y_i}= \frac{\sum_{i=1}^{13}{y_i}}{n}
+  \bar{y}= \frac{\sum_{i=1}^{13}{y_i}}{n}
 $$
 $$
-  \bar{y_i}= \frac{547}{13}
+  \bar{y}= \frac{547}{13}
 $$
 $$
-  \bar{y_i}= 42.07692308 \approx 42.08
+  \bar{y}= 42.07692308 \approx 42.08
 $$
 
 <br>
@@ -324,7 +324,7 @@ $$
 This leaves with the equation for the best fit line or **the fitted simple linear regression model:**
 
 $$
-  \hat{y}=4.223932534x--6.738740311
+  \hat{y}=4.223932534x-6.738740311
 $$
 
 ----- 
