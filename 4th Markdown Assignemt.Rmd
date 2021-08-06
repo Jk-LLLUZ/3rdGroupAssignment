@@ -8,7 +8,7 @@ output:
     theme: default
 ---
 
-# Module 4 Markdown Assignment {.tabset}
+# An Effort to Lower Electricity Bill in University Building by Automatic Lighting Switches Applicationt {.tabset}
 
 ## Introduction
 ### **Introduction**
@@ -44,7 +44,7 @@ With the goal to identify whether the sensors will decrease power consumption an
 
 <br>
 
-We, the researchers, will conduct a hypothesis test and the next step would be identifying the parameters. The parameters to be calculated are the means and standard deviations of both variables. The sample of both variables are the same which is 13 and lastly, we will use a 5% confidence interval for this hypothesis test.
+We, the researchers, will 
 
 -----
 
@@ -167,7 +167,7 @@ knitr::kable(df1, caption = '**Electrical Power with Sensors**' )
 
 <br>
 
-#### Simple Linear Regression 
+#### **Simple Linear Regression** 
 
 Given the set of x and y values, we can determine the simple linear regression model using the **least squares method.**  This method is best represented by the equation:
 
