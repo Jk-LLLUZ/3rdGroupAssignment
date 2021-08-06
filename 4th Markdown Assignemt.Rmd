@@ -8,9 +8,9 @@ output:
     theme: default
 ---
 
-# An Effort to Lower Electricity Bill in University Building by Automatic Lighting Switches Applicationt {.tabset}
+# An Effort to Lower Electricity Bill in University Building by Automatic Lighting Switches Application {.tabset}
 
-## Introduction
+## **Introduction**
 ### **Introduction**
 
 -----
@@ -33,7 +33,7 @@ While Martini et al. provided various data in their study regarding the effectiv
 
 
 
-## Methodology
+## **Methodology**
 ### **Methodology**
 
 In this paper, an infrared-based sensor namely Passive Infrared Receiver or PIR (*refer to Figure 1*) is used to detect body movements present. Based on its name, PIR is a passive type of sensor meaning by itself, it does not emit infrared radiations. With this distinct quality, PIR is the suitable device to use in this study as the detected heat radiation is solely caused by human presence and body movements, creating a more controlled environment guaranteed from external errors.
@@ -44,7 +44,11 @@ With the goal to identify whether the sensors will decrease power consumption an
 
 <br>
 
-We, the researchers, will 
+We, the researchers, will conduct a hypothesis test and the next step would be identifying the parameters. The parameters to be calculated are the means and standard deviations of both variables. The sample of both variables are the same which is 13 and lastly, we will use a 5% confidence interval for this hypothesis test.
+
+<br>
+
+To further solidify the conclusion, the researchers will also construct a simple linear regression of the data between the Electricity Consumption (in kWh) of the room with Sensors and time. This linear regression will be calculated through the use of the *Least Squares Method* which will be presented in the Results part of this paper.
 
 -----
 
@@ -73,7 +77,7 @@ We, the researchers, will
 
 
 
-### Identifying the Parameters
+### **Identifying the Parameters**
 
 :::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
 
@@ -138,10 +142,11 @@ $$
 
 
 
-## Results
-### **Results**
+## **Results** {.tabset .tabset-fade}
 
-```{r, echo= FALSE, fig.width = 5, fig.height = 3}
+### Simple Linear Regression Table {.tabset .tabset-fade}
+
+```{r, echo=FALSE}
 df1 <- data.frame(  
                     n             = 1:13,
                     Duration      = c(1,7,14,21,28,35,42,49,56,63,70,77,84),
@@ -149,13 +154,11 @@ df1 <- data.frame(
                     
                   )
 
-knitr::kable(df1, caption = '**Electrical Power with Sensors**' )
-
-
-
+knitr::kable(df1, caption = '**Electrical Power Consumption with Sensors**', align = "c", full_width = F, position = "center", )
 
 ```
 
+<center>
 ```{r, echo= FALSE}
   y <- c(1,	7,	14,	21,	28,	35,	42,	49,	56,	63, 70,	77,	84)
   x <- c(0.504,	2.711, 5.058,	7.158,	8.890,	10.622,	12.264,	13.816,	15.278,	16.651,	17.933,	19.126,	20.229)
@@ -163,11 +166,11 @@ knitr::kable(df1, caption = '**Electrical Power with Sensors**' )
   lm(y ~ x)
   abline(lm(y ~ x))
 ```
+</center>
 
+-----
 
-<br>
-
-#### **Simple Linear Regression** 
+### Linear Regression Calculation
 
 Given the set of x and y values, we can determine the simple linear regression model using the **least squares method.**  This method is best represented by the equation:
 
@@ -266,14 +269,14 @@ Summation of $x_i$ times $y_i$
 
 
 
-With these values solved for already, we may proceed to solving for $S_{xy}$ and $S_{xx}$ using the formulae below: <br><br>
+With these values solved for already, we may proceed to solving for $S_{xy}$ and $S_{xx}$ using the formula below: <br><br>
 
 **For $S_{xx}$**
 $$
   S_{xx} = \sum_{i = 1}^{n} x_i^2 - \frac{(\sum_{i = 1}^{n} x_i)^2}{n}
 $$
 
-<br>**For $S_{xy}$**
+<br> **For $S_{xy}$**
 $$
   S_{xy} = \sum_{i = 1}^{n} x_i y_i - \frac{(\sum_{i = 1}^{n} x_i)(\sum_{i = 1}^{n} y_i)}{n}
 $$
@@ -329,21 +332,23 @@ $$
 
 ----- 
 
-3rd markdown 
-
-### **Using the 7-Step Approach**
+### The 7-Step Approach
 
 #### **Step 1: Parameter of Interest**
+
 We are interested in $\mu_a$ and $\mu_b$, specifically the difference between the energy consumption in kilowatt hours of using the sensor and without the sensor. <br><br>
 
 
 #### **Step 2: Stating Null Hypothesis**
+
 The null hypothesis would be as follows $H_0 : \mu_A = \mu_b$ saying that there is no significant difference between the energy consumption with the sensor and without it.<br><br>
 
 #### **Step 3: Stating Alternative Hypothesis**
+
 The alternative hypothesis would be as follows $H_1 : \mu_A < \mu_B$ saying that the energy consumption without the sensor would be significantly greater than with the use of the sensor..<br><br>
 
 #### **Step 4: Determining Appropriate Test Statistic**
+
 Since the mean and standard deviation are known (refer to the Methodology section), and the sample is less than 30, then the appropriate test statistic is defined by the formula: 
 
 $$
@@ -402,7 +407,7 @@ Since  **0.004 is significantly less than 0.05**, we reject the null hypothesis.
 
 -----
 
-#### Data from the study:
+### Additional Data from the study
 
 :::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 15px;"}
 
@@ -419,7 +424,7 @@ df1 <- data.frame(
                     
                   )
 
-knitr::kable(df1, caption = '**Electrical Power w/o Sensors**' )
+knitr::kable(df1, caption = '**Electrical Power w/ Sensors**' )
 
 
 
@@ -436,7 +441,7 @@ x = c(0.504,2.711,5.058,7.158,8.890,10.622,12.264,13.816,15.278,16.651,17.933,19
 
 plot(
      x~y,
-     main = "Energy Consumption W/ Sensors",
+     main = "Energy Consumption w/ Sensors",
      xlab = "Duration (Hours)",
      ylab = "Electrical Power Consumption (kWh)",
      cex  = 1,
@@ -484,7 +489,7 @@ x = c(0.664,4.648,9.296,13.944,18.592,23.24,27.888,32.536,37.184,41.832,46.48,51
 
 plot(
      x~y,
-     main = "Energy Consumption WITHOUT Sensors",
+     main = "Energy Consumption w/o Sensors",
      xlab = "Duration (Hours)",
      ylab = "Electrical Power (kWh)",
      cex  = 1,
@@ -506,7 +511,8 @@ abline(line, col="red")
 
 ::::
 
-<br><br>
+-----
+
 **Comparison Based on the % of Reduction**
 
 
@@ -528,7 +534,7 @@ df3 <- data.frame(
                     y = c(0.664,4.648,9.296,13.944,18.592,23.24,27.888,32.536,37.184,41.832,46.48,51.128,55.776),
                     test3
                    )
-knitr::kable(df3, caption = '**With the given data, we have compared the values of the electrical power consumption by those with sensors to those without. When annalyzing data, it was observed that the value of energy consumption with sensors reduced in a given time in a range of 24% upto 64%. The plot observed has also shown a reduction of energy consumption in a given interval of time. **' )
+knitr::kable(df3, caption = 'With the given data, we have compared the values of the electrical power consumption by those with sensors to those without. When annalyzing data, it was observed that the value of energy consumption with sensors reduced in a given time in a range of 24% upto 64%. The plot observed has also shown a reduction of energy consumption in a given interval of time.' )
 
  
 ```
@@ -564,15 +570,20 @@ abline(line, col="red")
 
 
 
-## Discussion and Conclution
-### **Results**
+## **Discussion and Conclusion**
 
+### **Discussion**
 
+Based on the result of the 7-Step approach, the **null hypothesis** was **rejected** as 0.0004 is significantly less than 0.05. With this, we can conclude that the energy usage without a sensor is substantially higher than when a sensor is used, proving the PIRs to be successful in lowering power consumption. Additionally, according to the results that were found during the testing and experiment, there were still insignificance in the first hours of cost savings. However, the savings had increased considerably to over 60% overtime after one week. Ultimately, it can be said that this method of reducing energy consumption and cost is effective.
+
+-----
+
+### **Conclusion**
 
 Based on the result of the 7-Step approach, the **null hypothesis** was **rejected** as 0.0004 is significantly less than 0.05. With this, we can conclude that the energy usage without a sensor is substantially higher than when a sensor is used, proving the PIRs to be successful in lowering power consumption. Additionally, according to the results that were found during the testing and experiment, there were still insignificance in the first hours of cost savings. However, the savings had increased considerably to over 60% overtime after one week. Ultimately, it can be said that this method of reducing energy consumption and cost is effective.
 
 
-## References
+## **References**
 ### **References**
 
 
@@ -582,6 +593,5 @@ Based on the result of the 7-Step approach, the **null hypothesis** was **reject
 <br>
 <li> M. Martini, I. Riyanto, A. Krisna, and M. Suparmoko, An Effort to Lower Electricity Bill in University Building by Automatic Lighting Switches Application, Aug. 2017. [Online]. Available: https://www.researchgate.net/publication/323401202_An_Effort_to_Lower_Electricity_Bill_in_University_Building_by_Automatic_Lighting_Switches_Applicatio. [Accessed: 30-July-2021]. </li>
 </ol>
-
 
 
