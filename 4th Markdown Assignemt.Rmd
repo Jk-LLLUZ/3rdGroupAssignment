@@ -9,6 +9,7 @@ output:
 ---
 
 # An Effort to Lower Electricity Bill in University Building by Automatic Lighting Switches Application {.tabset}
+Martini Martini, Indra Riyanto, Adiyarta Krisna, M Suparmoko
 
 ## **Introduction**
 ### **Introduction**
