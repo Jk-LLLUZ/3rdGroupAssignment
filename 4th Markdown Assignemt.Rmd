@@ -333,7 +333,7 @@ $$
 
 ----- 
 
-### The 7-Step Approach
+### Hypothesis Testing
 
 #### **Step 1: Parameter of Interest**
 
